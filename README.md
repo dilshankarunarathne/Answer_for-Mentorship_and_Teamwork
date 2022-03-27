@@ -83,15 +83,14 @@ For example:
 
 For the project WebServer above we could make the following assignments:  
   
-Role 0 (requires Python level 3) is assigned to Anna (Python level 3).  
-  
+>Role 0 (requires Python level 3) is assigned to Anna (Python level 3).  
 ☑️ Anna has the same level in Python as required.  
-Role 1 (requires HTML level 1) is assigned to Bob (C++ level 3).  
-  
+
+>Role 1 (requires HTML level 1) is assigned to Bob (C++ level 3).  
 ⚠ Bob has level 0 in HTML. Since his level is only one below required, he can be assigned, 
 but must be mentored by another contributor who knows HTML at level 1 or above.  
-Role 2 (requires CSS level 5) is assigned to Maria (HTML level 4, CSS level 6)  
   
+>Role 2 (requires CSS level 5) is assigned to Maria (HTML level 4, CSS level 6)  
 ☑️ Maria has a higher level than the one required for CSS.  
 ☑️ Maria can mentor Bob on HTML since she has HTML level 4.  
 
