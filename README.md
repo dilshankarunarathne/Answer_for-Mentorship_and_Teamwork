@@ -132,6 +132,10 @@ c. ![Collaboration](input/c_collaboration.in.txt)
 d. ![Dense schedule](input/d_dense_schedule.in.txt)
 e. ![Exeptional skills](input/e_exceptional_skills.in.txt)
 f. ![Find great mentors](input/f_find_great_mentors.in.txt)
+  
+<ol type='a'> 
+<li><a href="input/a_an_example.in.txt" download>An example</a></li>
+</ol>
 
 ### File format
 Each input data set is provided in a plain text file. 
