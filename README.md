@@ -125,16 +125,14 @@ Bob improves HTML skill to level 1;
 Maria improves neither the CSS skill (because Maria’s CSS is already at a level higher than required) 
 nor the HTML skill (because her role required CSS, not HTML).  
 
-### Input data sets
-a. ![An example](input/a_an_example.in.txt)
-b. ![Better start small](input/b_better_start_small.in.txt)
-c. ![Collaboration](input/c_collaboration.in.txt)
-d. ![Dense schedule](input/d_dense_schedule.in.txt)
-e. ![Exeptional skills](input/e_exceptional_skills.in.txt)
-f. ![Find great mentors](input/f_find_great_mentors.in.txt)
-  
+### Input data sets  
 <ol type='a'> 
-<li><a href="input/a_an_example.in.txt" download>An example</a></li>
+<li><a href="https://github.com/dilshankarunarathne/Answer_for-Mentorship_and_Teamwork/raw/main/input/a_an_example.in.txt" download>An example</a></li>
+<li><a href="https://github.com/dilshankarunarathne/Answer_for-Mentorship_and_Teamwork/raw/main/input/b_better_start_small.in.txt" download>Better start small</a></li>
+<li><a href="https://github.com/dilshankarunarathne/Answer_for-Mentorship_and_Teamwork/raw/main/input/c_collaboration.in.txt" download>Collaboration</a></li>
+<li><a href="https://github.com/dilshankarunarathne/Answer_for-Mentorship_and_Teamwork/raw/main/input/d_dense_schedule.in.txt" download>Dense schedule</a></li>
+<li><a href="https://github.com/dilshankarunarathne/Answer_for-Mentorship_and_Teamwork/raw/main/input/e_exceptional_skills.in.txt" download>Exeptional skills</a></li>
+<li><a href="https://github.com/dilshankarunarathne/Answer_for-Mentorship_and_Teamwork/raw/main/input/f_find_great_mentors.in.txt" download>Find great mentors</a></li>
 </ol>
 
 ### File format
