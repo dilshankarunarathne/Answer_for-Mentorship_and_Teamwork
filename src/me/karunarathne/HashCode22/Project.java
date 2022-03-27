@@ -23,6 +23,8 @@ public class Project {
 
     private boolean addRole (Role role) {
         roles_for_contributors.add(role) ;
+
+        return false ;
     }
 
     private boolean assignContributor (Contributor contributor, Role role) {
@@ -31,5 +33,7 @@ public class Project {
 
             }
         }
+
+        return false ;
     }
 }

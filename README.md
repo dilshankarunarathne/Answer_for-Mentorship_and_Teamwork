@@ -119,9 +119,9 @@ For example:
   
 In the assignments above:  
   
-Anna improves Python skill to level 4;  
-Bob improves HTML skill to level 1;  
-Maria improves neither the CSS skill (because Maria’s CSS is already at a level higher than required) 
+* Anna improves Python skill to level 4;  
+* Bob improves HTML skill to level 1;  
+* Maria improves neither the CSS skill (because Maria’s CSS is already at a level higher than required) 
 nor the HTML skill (because her role required CSS, not HTML).  
 
 ### Input data sets  
