@@ -1,4 +1,4 @@
-# Answer_for-Mentorship_and_Teamwork
+# Answer for - Mentorship and Teamwork
  Google Hash Code '22 Question
 
 # Creadit goes to Google LLC - Hash Code '22
