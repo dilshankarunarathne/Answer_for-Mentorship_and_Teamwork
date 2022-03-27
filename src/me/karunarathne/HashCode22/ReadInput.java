@@ -14,15 +14,16 @@ public class ReadInput {
     private static void readContributors (String contributorsInfo) {
         String [] contributor_info_arr = contributorsInfo.split("\n" ) ;
 
-        for (int i=0; i<contributor_info_arr.length; i++) {
+        for (int i=0; i<contributor_info_arr.length; ) {
             String [] elements = contributor_info_arr[i].split(" ") ;
-            Contributor currentContributor ;
+            Contributor currentContributor = new Contributor(elements[0]) ;
 
-            // checking if it's a name
-            if (! isSkill (elements [0])) {
-                currentContributor = new Contributor(elements [0]) ;
-                
+            for (int j=1; j<Integer.parseInt(elements[1])+1 ; j++) {
+                currentContributor.addSkill ( contributor_info_arr [i+j].split(" ")) ;
             }
+            i += Integer.parseInt(elements[1])+1 ;
+
+            contributorList.add(currentContributor) ;
         }
     }
 

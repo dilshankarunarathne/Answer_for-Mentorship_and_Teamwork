@@ -4,13 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Project {
-    private String name ;
-    private int duration ;                  // in days
-    private double score ;
-    private int best_before ;               // in days
+    private final String name ;
+    private final int duration ;                  // in days
+    private final double score ;
+    private final int best_before ;               // in days
+
     List<Role> roles_for_contributors ;
-
-
 
     public Project (String name, int duration, double score, int best_before) {
         this.name = name;
