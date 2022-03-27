@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ReadInput {
+class ReadInput {
     private static final String [] SKILLS = {"HTML", "Python", "CSS", "C++"} ;
     private static int numOfContributors;
     private static int numOfProjects;

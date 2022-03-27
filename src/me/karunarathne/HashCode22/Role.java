@@ -2,7 +2,7 @@ package me.karunarathne.HashCode22;
 
 import java.util.Objects;
 
-public class Role {
+class Role {
     private final String required_skill ;
     private final int level ;
 

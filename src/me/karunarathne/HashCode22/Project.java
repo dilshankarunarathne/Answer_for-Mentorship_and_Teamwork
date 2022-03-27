@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-public class Project {
+class Project {
     private final String name ;
     private final int duration ;                  // in days
     private final double score ;

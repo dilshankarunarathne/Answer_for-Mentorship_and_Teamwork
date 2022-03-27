@@ -2,7 +2,7 @@ package me.karunarathne.HashCode22;
 
 import java.util.Locale;
 
-public class Contributor {
+class Contributor {
     private final String name ;
 
     private int htmlSkill ;
