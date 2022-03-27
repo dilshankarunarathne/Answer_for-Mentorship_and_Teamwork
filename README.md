@@ -126,7 +126,12 @@ Maria improves neither the CSS skill (because Maria’s CSS is already at a leve
 nor the HTML skill (because her role required CSS, not HTML).  
 
 ### Input data sets
-Will be provided later...
+a. ![An example](input/a_an_example.in.txt)
+b. ![Better start small](input/b_better_start_small.in.txt)
+c. ![Collaboration](input/c_collaboration.in.txt)
+d. ![Dense schedule](input/d_dense_schedule.in.txt)
+e. ![Exeptional skills](input/e_exceptional_skills.in.txt)
+f. ![Find great mentors](input/f_find_great_mentors.in.txt)
 
 ### File format
 Each input data set is provided in a plain text file. 
