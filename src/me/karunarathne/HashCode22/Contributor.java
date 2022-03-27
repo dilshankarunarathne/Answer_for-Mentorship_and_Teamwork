@@ -3,7 +3,7 @@ package me.karunarathne.HashCode22;
 import java.util.Locale;
 
 public class Contributor {
-    private String name ;
+    private final String name ;
 
     private int htmlSkill ;
     private int pythonSkill ;

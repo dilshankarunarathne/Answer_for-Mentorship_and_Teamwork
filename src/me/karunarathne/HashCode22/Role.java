@@ -3,10 +3,10 @@ package me.karunarathne.HashCode22;
 import java.util.Objects;
 
 public class Role {
-    private Skill required_skill ;
-    private int level ;
+    private final String required_skill ;
+    private final int level ;
 
-    public Role(Skill required_skill, int level) {
+    public Role(String required_skill, int level) {
         this.required_skill = required_skill;
         this.level = level;
     }
@@ -14,9 +14,9 @@ public class Role {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Role)) return false;
-        Role role = (Role) o;
-        return level == role.level && required_skill == role.required_skill;
+        if (!(o instanceof Role role)) return false;
+
+        return level == role.level && required_skill.equals(role.required_skill) ;
     }
 
     @Override

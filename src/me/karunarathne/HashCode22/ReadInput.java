@@ -10,6 +10,7 @@ public class ReadInput {
     private static int numOfProjects;
 
     private static List<Contributor> contributorList  = new ArrayList<>() ;
+    private static List<Project> projectList = new ArrayList<>() ;
 
     private static void readContributors (String contributorsInfo) {
         String [] contributor_info_arr = contributorsInfo.split("\n" ) ;
@@ -24,6 +25,29 @@ public class ReadInput {
             i += Integer.parseInt(elements[1])+1 ;
 
             contributorList.add(currentContributor) ;
+        }
+    }
+
+    private static void readProjects (String projectsInfo) {
+        String [] project_info_arr = projectsInfo.split("\n" ) ;
+
+        for (int i=0; i<project_info_arr.length; ) {
+            String [] elements = project_info_arr [i].split(" ") ;
+            Project currentProject = new Project (
+                    elements [0],                           // name
+                    Integer.parseInt(elements [1]),         // duration
+                    Integer.parseInt(elements [2]),         // score
+                    Integer.parseInt(elements [3])           // best before
+            ) ;
+
+            for (int j=1; j<Integer.parseInt(elements[4])+1 ; j++) {
+                currentProject.addRole (
+                        project_info_arr [i+j]
+                ) ;
+            }
+            i += Integer.parseInt(elements[4])+1 ;
+
+            projectList.add (currentProject) ;
         }
     }
 

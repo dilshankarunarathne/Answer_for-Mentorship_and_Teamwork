@@ -2,6 +2,7 @@ package me.karunarathne.HashCode22;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class Project {
     private final String name ;
@@ -21,18 +22,13 @@ public class Project {
     }
 
     private boolean addRole (Role role) {
-        roles_for_contributors.add(role) ;
-
-        return false ;
+        return roles_for_contributors.add(role) ;
     }
 
-    private boolean assignContributor (Contributor contributor, Role role) {
-        for (Role r: roles_for_contributors) {
-            if (r.equals(role)) {
+    public void addRole(String input) {
+        String [] elements = input.split(" ") ;
+        Role role = new Role(elements [0].toUpperCase(Locale.ROOT) , Integer.parseInt(elements[1])) ;
 
-            }
-        }
-
-        return false ;
+        roles_for_contributors.add(role) ;
     }
 }
