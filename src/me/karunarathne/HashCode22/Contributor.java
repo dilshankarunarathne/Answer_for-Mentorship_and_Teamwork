@@ -37,4 +37,19 @@ class Contributor {
                 return false ;
         }
     }
+
+    public int getSkillLevel (String skill) {
+        switch (skill.toUpperCase(Locale.ROOT)) {
+            case ("HTML") :;
+                return htmlSkill ;
+            case ("C++") :
+                return cppSkill ;
+            case ("CSS") :
+                return cssSkill ;
+            case ("PYTHON") :
+                return pythonSkill ;
+            default:
+                return 0 ;
+        }
+    }
 }

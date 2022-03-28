@@ -6,9 +6,19 @@ class Role {
     private final String required_skill ;
     private final int level ;
 
+    Contributor assignedContributor ;
+
     public Role(String required_skill, int level) {
         this.required_skill = required_skill;
         this.level = level;
+    }
+
+    public Contributor getAssignedContributor() {
+        return assignedContributor;
+    }
+
+    public void setAssignedContributor(Contributor assignedContributor) {
+        this.assignedContributor = assignedContributor;
     }
 
     @Override
@@ -22,5 +32,12 @@ class Role {
     @Override
     public int hashCode() {
         return Objects.hash(required_skill, level);
+    }
+
+    public String getRequired_skill() {
+        return required_skill;
+    }
+    public int getLevel() {
+        return level;
     }
 }

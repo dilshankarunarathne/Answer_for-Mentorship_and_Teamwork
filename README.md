@@ -1,7 +1,7 @@
 # Answer for - Mentorship and Teamwork
  Google Hash Code '22 Question
 
-# Creadit goes to Google LLC - Hash Code '22
+# Credit goes to Google LLC - Hash Code '22
 
 Work is so much more fun when we are part of a team! By combining our different skills, 
 we can be more creative, efficient and productive. And more importantly, when working together 
@@ -130,7 +130,7 @@ nor the HTML skill (because her role required CSS, not HTML).
 <li><a href="https://github.com/dilshankarunarathne/Answer_for-Mentorship_and_Teamwork/raw/main/input/b_better_start_small.in.txt" download>Better start small</a></li>
 <li><a href="https://github.com/dilshankarunarathne/Answer_for-Mentorship_and_Teamwork/raw/main/input/c_collaboration.in.txt" download>Collaboration</a></li>
 <li><a href="https://github.com/dilshankarunarathne/Answer_for-Mentorship_and_Teamwork/raw/main/input/d_dense_schedule.in.txt" download>Dense schedule</a></li>
-<li><a href="https://github.com/dilshankarunarathne/Answer_for-Mentorship_and_Teamwork/raw/main/input/e_exceptional_skills.in.txt" download>Exeptional skills</a></li>
+<li><a href="https://github.com/dilshankarunarathne/Answer_for-Mentorship_and_Teamwork/raw/main/input/e_exceptional_skills.in.txt" download>Exceptional skills</a></li>
 <li><a href="https://github.com/dilshankarunarathne/Answer_for-Mentorship_and_Teamwork/raw/main/input/f_find_great_mentors.in.txt" download>Find great mentors</a></li>
 </ol>
 

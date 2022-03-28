@@ -31,4 +31,20 @@ class Project {
 
         roles_for_contributors.add(role) ;
     }
+
+    public String getName() {
+        return name;
+    }
+    public int getDuration() {
+        return duration;
+    }
+    public double getScore() {
+        return score;
+    }
+    public int getBest_before() {
+        return best_before;
+    }
+    public List<Role> getRoles_for_contributors() {
+        return roles_for_contributors;
+    }
 }
