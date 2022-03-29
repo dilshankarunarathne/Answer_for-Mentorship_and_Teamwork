@@ -5,11 +5,12 @@ import java.util.List;
 
 public class Organization {
     private static final String [] SKILLS = {"HTML", "Python", "CSS", "C++"} ;
-    private static int numOfContributors;
-    private static int numOfProjects;
 
-    private static List<Contributor> contributorList  = new ArrayList<>() ;
-    private static List<Project> projectList = new ArrayList<>() ;
+    private static int numberOfContributors;
+    private static int numberOfProjects;
+
+    private static Contributor [] contributorList  = new Contributor [numberOfContributors] ;
+    private static Project [] projectList = new Project [numberOfProjects] ;
 
     // TODO
     private static void populate () {
@@ -18,31 +19,35 @@ public class Organization {
 
     private static void autoAssign () {
         for (Project project: projectList) {
-            List <Role> roles = project.getRoles_for_contributors() ;
+            Role [] roles = project.getRoles_for_contributors() ;
 
             for (Role role: roles) {
-                role.setAssignedContributor( getBestContributor (role)) ;
+                String requiredSkill = role.getRequired_skill() ;
+                int requiredLevel = role.getLevel() ;
+
+                for (Contributor contributor: contributorList) {
+                    int contributorsSkillLevel = contributor.getSkillLevel(requiredSkill) ;
+
+                    // skill level of the contributor matches the required skill level
+                    if (contributorsSkillLevel > requiredLevel) {
+                        // TODO
+                    }
+
+                    // need to be mentored
+                    else if (contributorsSkillLevel == requiredLevel - 1) {
+                        // TODO
+                    }
+                }
             }
         }
     }
 
-    private static Contributor getBestContributor(Role role) {
-        String requiredSkill = role.getRequired_skill() ;
-        int requiredLevel = role.getLevel() ;
-
-        for (Contributor contributor: contributorList) {
-            int contributorsSkillLevel = contributor.getSkillLevel(requiredSkill) ;
-
-            // skill level of the contributor matches the required skill level
-            if (contributorsSkillLevel >= requiredLevel) {
-                // TODO
-            }
-
-            // need to be mentored
-            else if (contributorsSkillLevel == requiredLevel - 1) {
-                // TODO
-            }
+    private static int calculateTotalDays () {
+        int days = 0 ;
+        for (Project project: projectList) {
+            days += project.roles_for_contributors.length * project.getDuration() ;
         }
+        return days ;
     }
 
 }

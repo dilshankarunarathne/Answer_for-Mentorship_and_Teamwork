@@ -12,6 +12,8 @@ class Project {
 
     List<Role> roles_for_contributors ;
 
+
+
     public Project (String name, int duration, double score, int best_before) {
         this.name = name;
         this.duration = duration;
