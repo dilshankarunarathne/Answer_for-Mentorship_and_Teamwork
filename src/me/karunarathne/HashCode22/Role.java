@@ -19,8 +19,9 @@ class Role {
         return assignedContributor;
     }
 
-    public void setAssignedContributor(Contributor assignedContributor) {
+    public void assignContributor(Contributor assignedContributor) {
         this.assignedContributor = assignedContributor;
+        filled = true ;
     }
 
     @Override

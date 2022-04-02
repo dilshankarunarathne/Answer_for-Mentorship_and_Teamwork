@@ -12,55 +12,64 @@ public class Organization {
     private static Contributor [] contributorList  = new Contributor [numberOfContributors] ;
     private static Project [] projectList = new Project [numberOfProjects] ;
 
+    private static void assign () {
+        for (Contributor c: contributorList) {
+
+        }
+    }
+
+    private static int calculateTotalDays () {
+        int totalDays = 0 ;
+        for (Project p: projectList) {
+            totalDays += p.getDuration() ;
+        }
+        return totalDays ;
+    }
+
     // TODO
     private static void populate () {
 
     }
 
     private static void autoAssign () {
-        int totalDays = 0 ;
-        for (Project p: projectList) {
-            totalDays += p.getDuration() ;
-        }
-
-        // for each day - all contributors should be assigned to a project
-        // can mark the boolean in role objects
-
-        for (Contributor c: contributorList) {
-
-        }
-
-
         for (Project project: projectList) {
             Role [] roles = project.getRoles_for_contributors() ;
+
+            boolean [] taken = new boolean[contributorList.length] ;
 
             for (Role role: roles) {
                 String requiredSkill = role.getRequired_skill() ;
                 int requiredLevel = role.getLevel() ;
 
-                for (Contributor contributor: contributorList) {
-                    int contributorsSkillLevel = contributor.getSkillLevel(requiredSkill) ;
+                for (int i=0; i<contributorList.length; i++) {
+                    int contributorsSkillLevel = contributorList [i].getSkillLevel(requiredSkill) ;
+
+                    // not applicable
+                    if (contributorsSkillLevel < requiredLevel-1) continue ;
+                    if (taken [i] == true) continue ;
 
                     // skill level of the contributor matches the required skill level
-                    if (contributorsSkillLevel >= requiredLevel) {
-                        // TODO
+                    // level up
+                    if (contributorsSkillLevel == requiredLevel) {
+                        role.assignContributor (contributorList [i]);
+                        taken [i] = true ;
+                    }
+
+                    // Can work
+                    else if (contributorsSkillLevel > requiredLevel) {
+                        role.assignContributor (contributorList [i]);
+                        taken [i] = true ;
                     }
 
                     // need to be mentored
                     else if (contributorsSkillLevel == requiredLevel - 1) {
-                        // TODO
+                        role.assignContributor (contributorList [i]);
+                        taken [i] = true ;
                     }
+
                 }
             }
         }
-    }
-
-    private static int calculateTotalDays () {
-        int days = 0 ;
-        for (Project project: projectList) {
-            days += project.roles_for_contributors.size() * project.getDuration() ;
-        }
-        return days ;
     }
 
 }
