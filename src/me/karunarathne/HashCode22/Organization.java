@@ -31,6 +31,16 @@ public class Organization {
 
     }
 
+    private static void checkAssignments () {
+        for (Project project: projectList) {
+            for (Role r: project.getRoles_for_contributors()) {
+                if (! r.filled) {
+
+                }
+            }
+        }
+    }
+
     private static void autoAssign () {
         for (Project project: projectList) {
             Role [] roles = project.getRoles_for_contributors() ;
@@ -46,10 +56,10 @@ public class Organization {
 
                     // not applicable
                     if (contributorsSkillLevel < requiredLevel-1) continue ;
-                    if (taken [i] == true) continue ;
+                    if (taken[i]) continue ;
 
-                    // skill level of the contributor matches the required skill level
-                    // level up
+                    // skill level of the contributor matches the required skill
+                    // levels up
                     if (contributorsSkillLevel == requiredLevel) {
                         role.assignContributor (contributorList [i]);
                         taken [i] = true ;
@@ -63,8 +73,14 @@ public class Organization {
 
                     // need to be mentored
                     else if (contributorsSkillLevel == requiredLevel - 1) {
-                        role.assignContributor (contributorList [i]);
-                        taken [i] = true ;
+                        // check if mentors are available
+                        for (Contributor c: contributorList) {
+                            if (c.getSkillLevel(requiredSkill) > requiredLevel) {
+                                // levels up
+                                role.assignContributor (contributorList [i]);
+                                taken [i] = true ;
+                            }
+                        }
                     }
 
                 }
