@@ -18,6 +18,19 @@ public class Organization {
     }
 
     private static void autoAssign () {
+        int totalDays = 0 ;
+        for (Project p: projectList) {
+            totalDays += p.getDuration() ;
+        }
+
+        // for each day - all contributors should be assigned to a project
+        // can mark the boolean in role objects
+
+        for (Contributor c: contributorList) {
+
+        }
+
+
         for (Project project: projectList) {
             Role [] roles = project.getRoles_for_contributors() ;
 
@@ -29,7 +42,7 @@ public class Organization {
                     int contributorsSkillLevel = contributor.getSkillLevel(requiredSkill) ;
 
                     // skill level of the contributor matches the required skill level
-                    if (contributorsSkillLevel > requiredLevel) {
+                    if (contributorsSkillLevel >= requiredLevel) {
                         // TODO
                     }
 
@@ -45,7 +58,7 @@ public class Organization {
     private static int calculateTotalDays () {
         int days = 0 ;
         for (Project project: projectList) {
-            days += project.roles_for_contributors.length * project.getDuration() ;
+            days += project.roles_for_contributors.size() * project.getDuration() ;
         }
         return days ;
     }

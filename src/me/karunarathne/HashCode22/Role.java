@@ -6,6 +6,8 @@ class Role {
     private final String required_skill ;
     private final int level ;
 
+    boolean filled = false ;
+
     Contributor assignedContributor ;
 
     public Role(String required_skill, int level) {

@@ -46,7 +46,7 @@ class Project {
     public int getBest_before() {
         return best_before;
     }
-    public List<Role> getRoles_for_contributors() {
-        return roles_for_contributors;
+    public Role[] getRoles_for_contributors() {
+        return (Role []) roles_for_contributors.toArray();
     }
 }
